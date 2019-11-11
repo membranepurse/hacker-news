@@ -1,17 +1,20 @@
 {
   "name": "simple-todo",
+  "homepage": "https://github.com/solvedsager/hacker-news",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^2.1.1",
     "react": "^16.0.0-rc.3",
     "react-dom": "^16.0.0-rc.3",
     "react-scripts": "1.0.13"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "eject": "react-scripts eject"
   }
 }
